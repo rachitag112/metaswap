@@ -106,7 +106,34 @@
 
 .logo {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 1rem 2rem;
+  font-size: large;
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: large;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -212,10 +239,6 @@
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
     filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 

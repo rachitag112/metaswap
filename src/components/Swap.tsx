@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import tokenSwapABI from '../utils/TokenSwapABI.json';
 import ERC20_ABI from '../utils/ERC20ABI.json';
+import styles from '../styles/Home.module.css';
 
 type TokenType = 'SDT' | 'SKT';
 
@@ -113,7 +114,7 @@ export const Swap: React.FC = () => {
     }
 
     return (
-        <div>
+        <div className={styles.swap}>
             <div>
                 <input
                     type="text"
@@ -126,6 +127,7 @@ export const Swap: React.FC = () => {
                     <option value="SKT">SKT</option>
                 </select>
             </div>
+            <br />
             <div>
                 <input
                     type="text"
@@ -136,6 +138,7 @@ export const Swap: React.FC = () => {
                     <option value={swapToken}>{swapToken}</option>
                 </select>
             </div>
+            <br />
             <button onClick={handleSwap}>Swap!</button>
         </div>
     );
